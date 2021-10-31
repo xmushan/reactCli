@@ -4,7 +4,7 @@
 var program = require('commander');
 const utils = require('../utils/index')
 var inquirer = require('../src/inquirer')
-
+var create = require('../src/create')
 // 整一些花里胡哨的颜色
 const { green, yellow, blue } = utils
 program.version('0.0.1')
@@ -15,9 +15,9 @@ program
     .command('create')
     .description('create a project ')
     .action(function () {
-        green('😊😊😊'+'欢迎使用您react-cli,轻松构建react ts项目～🎉🎉🎉')
+        green('😊😊😊'+'欢迎您使用react-cli,轻松构建react ts项目～🎉🎉🎉')
         inquirer().then(answer=>{
-            console.log('answer=', answer )
+            create(answer)
         })
     })
 
