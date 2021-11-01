@@ -5,6 +5,7 @@ var program = require('commander');
 const utils = require('../utils/index')
 var inquirer = require('../src/inquirer')
 var create = require('../src/create')
+const start = require('../src/start')
 // 整一些花里胡哨的颜色
 const { green, yellow, blue } = utils
 program.version('0.0.1')
@@ -27,6 +28,9 @@ program
     .description('start a project')
     .action(function () {
         green('--------运行项目-------')
+        start('start').then(()=>{
+            green('-------✅  ✅运行完成-------')
+        })
     })
 
 
