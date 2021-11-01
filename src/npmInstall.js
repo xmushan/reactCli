@@ -10,6 +10,7 @@ function runCmd(cmd, args, fn) {
     args = args || []
     // child_process.spawn运行终端命令
     // stdio: 'inherit': 子进程将使用父进程的标准输入输出。
+    // spawn 函数在一个新的进程里启动一个命令，可以给这个命令传递任何的参数
     var runner = require('child_process').spawn(cmd, args, {
       stdio: 'inherit'
     })
