@@ -13,6 +13,7 @@ const fs = require('fs')
 const utils = require('../utils/index')
 const {Buffer} = require('buffer')
 const npm = require('../src/npmInstall')
+const start = require('../src/start')
 
 let fileCount = 0  /* 文件数量 */
 let dirCount = 0   /* 文件夹数量 */
@@ -124,8 +125,11 @@ function copy (sourcePath,currentPath,cb){
 // 启动项目
 function runProject(){
     try{
-        const start = npm([ 'start' ])
-        start()
+        // const start = npm([ 'start' ])
+        // start()
+        start('start').then(()=>{
+            green('-------✅✅✅运行完成-------')
+        })
     }catch(e){
        utils.red('自动启动失败，请手动npm start 启动项目')
     }

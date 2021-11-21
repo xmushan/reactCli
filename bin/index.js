@@ -7,7 +7,7 @@ var inquirer = require('../src/inquirer')
 var create = require('../src/create')
 const start = require('../src/start')
 // 整一些花里胡哨的颜色
-const { green, yellow, blue } = utils
+const { green } = utils
 program.version('0.0.1')
 
 
@@ -29,7 +29,7 @@ program
     .action(function () {
         green('--------运行项目-------')
         start('start').then(()=>{
-            green('-------✅  ✅运行完成-------')
+            green('-------✅✅✅运行完成-------')
         })
     })
 
@@ -39,6 +39,9 @@ program
     .description('build a project')
     .action(function () {
         green('--------构建项目-------')
+        start('build').then(()=>{
+            green('-------✅✅✅构建完成-------')
+        })
     })
 
 // 通过program.parse(arguments)方法处理参数 如果没有 命令将无效
