@@ -4,7 +4,7 @@
 const child_process = require('child_process')
 const chalk = require('chalk')
 const fs = require('fs')
-const currentPath = process.cwd()
+const currentPath = process.cwd() + '/node_modules/custom-react-webpack-plugin'
 
 module.exports = (type) => {
     return new Promise((resolve,reject)=>{
