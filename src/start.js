@@ -7,7 +7,6 @@ const fs = require('fs')
 const currentPath = process.cwd()
 
 module.exports = (type) => {
-    console.log(type,'type')
     return new Promise((resolve,reject)=>{
         fs.access(currentPath,(ext)=>{
             if(!ext){
