@@ -41,6 +41,8 @@ program
         green('--------构建项目-------')
         start('build').then(()=>{
             green('-------✅✅✅构建完成-------')
+            // 退出进程
+            process.exit(1)
         })
     })
 
