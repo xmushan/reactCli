@@ -30,7 +30,7 @@ module.exports = (type) => {
               }
             })
             }else{
-               console.log( chalk.red('请安装相关依赖！')   )
+               console.log( chalk.red('请安装相关依赖!')   )
             }
         })
     })
