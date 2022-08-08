@@ -16,9 +16,9 @@ module.exports = (type) => {
                 cwdPath:process.cwd(),
                 type: type || 'build'
             }))
+            // 接收子进程的数据
             children.on('message', message => {
               const { status,err } = message
-              console.log(message,'children')
               if(status === 'success') {
                 resolve(true)
                 return

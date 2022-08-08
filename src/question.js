@@ -6,7 +6,7 @@ const question = [
      },{
          name:'name',
          message:'请输入项目名称？',
-         when: res => Boolean(res.conf) /* 是否进行 */
+         when: res => Boolean(res.conf)/* 是否进行 */
      },{
          name:'author',
          message:'请输入作者？',
